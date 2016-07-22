@@ -8,3 +8,18 @@
 </form>
 
 <a href="/stores/<%=@store.id()%>/edit">Update Store</a>
+
+<br>
+
+<a href="/">Home</a>
+
+<form action="/brands/create" method="post">
+  <input type="text" name="brand_name" value="">
+  <button type="submit" name="button"></button>
+</form>
+
+<h2>all brands</h2>
+
+<% @store.brands.each do |brand| %>
+  <%= brand.name %>
+<% end %>
