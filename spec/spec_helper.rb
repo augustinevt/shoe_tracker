@@ -10,3 +10,11 @@ require 'capybara/rspec'
 Capybara.app = Sinatra::Application
 set :show_exceptions, false
 require './app'
+
+RSpec.configure do |config|
+  config.after(:each) do
+    Store.all.each do |store|
+      store.destroy()
+    end
+  end
+end

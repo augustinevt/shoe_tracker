@@ -1,5 +1,5 @@
 <% @stores.each do |store| %>
-  <h1><%=store.name()%></h1>
+<a href="/stores/<%=store.id()%>"><h1><%=store.name()%></h1></a>
 <%end%>
 
 <a href="/stores/new">New Store</a>

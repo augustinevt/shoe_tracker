@@ -25,3 +25,14 @@ delete('/stores/:id') do
   @store = Store.find(params['id']).destroy()
   redirect '/'
 end
+
+get('/stores/:id/edit') do
+  @store = Store.find(params['id'])
+  erb(:store_edit)
+end
+
+patch('/stores/:id') do
+  @store = Store.find(params['id'])
+  @store.update(name: params['name'], location: params['location'])
+  redirect "/stores/#{@store.id()}"
+end
