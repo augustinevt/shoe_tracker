@@ -1,5 +1,7 @@
 <% @stores.each do |store| %>
-<a href="/stores/<%=store.id()%>"><h1><%=store.name()%></h1></a>
+<div class="well">
+  <a href="/stores/<%=store.id()%>"><h1><%=store.name()%><img src="http://us.louisvuitton.com/images/is/image/lv/1/LV/louis-vuitton-find-a-store-usa-louis-vuitton-las-vegas-fashion-show--StFi_Louis_Vuitton_las_vegas_fashion_show_store_01.jpg" alt="shoe store picture" /></h1></a>
+</div>
 <%end%>
 
-<a href="/stores/new">New Store</a>
+<a id="new-store-button" class="btn btn-success" href="/stores/new">New Store</a>

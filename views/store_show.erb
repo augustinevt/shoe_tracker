@@ -1,26 +1,23 @@
-<%= @store.name() %>
-<%= @store.location() %>
-
-
+<h1 class="center jumbotron"><%= @store.name()%></h1>
+<div class="center jumbotron" id="location">
+  <h2>location:</h2>
+  <h3><%= @store.location() %></h3>
+</div>
+<a class="btn btn-success" href="/stores/<%=@store.id()%>/edit">Update Store</a>
+<br>
+<br>
 <form class="" action="/stores/<%=@store.id()%>" method="post">
   <input type="hidden" name="_method" value="delete">
-  <button type="submit" name="button">Delete</button>
+  <button class="btn btn-danger" type="submit" name="button">Delete</button>
 </form>
-
-<a href="/stores/<%=@store.id()%>/edit">Update Store</a>
-
 <br>
-
-<a href="/">Home</a>
-
 <form action="/brands/create" method="post">
   <input type="hidden" name="store_id" value="<%=@store.id()%>">
   <input type="text" name="brand_name" value="">
   <button type="submit" name="button">Add Brand</button>
 </form>
-
+<br>
 <h2>all brands</h2>
-
 <% @store.brands.each do |brand| %>
-  <%= brand.name %>
+ <h3><%= brand.name%></h3>
 <% end %>

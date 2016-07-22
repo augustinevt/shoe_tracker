@@ -49,7 +49,3 @@ post('/brands/create') do
     redirect "/stores/#{@store.id()}"
   end
 end
-
-patch('/brands/:id') do
-  redirect "/"
-end

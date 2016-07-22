@@ -10,6 +10,4 @@ describe 'Brand' do
     new_brand = Brand.create(name: 'addidas')
     expect(Brand.all.first.name).to eq('Addidas')
   end
-
-
 end

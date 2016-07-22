@@ -10,7 +10,7 @@ This application is a place for shoe dogs to share information about shoe stores
 
 ## Setup/Installation Requirements
 
-* Go to [github](https://github.com/augustinevt/hair_salon) and clone the repository
+* Go to [github](https://github.com/augustinevt/shoe_tracker) and clone the repository
 * Make sure you have all the gem dependencies bundled before running the app locally!
 
 ## Known Bugs

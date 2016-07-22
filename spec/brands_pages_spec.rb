@@ -28,5 +28,4 @@ describe 'Brands', type: :feature do
     click_on('Add Brand')
     expect(Brand.all).to eq([new_brand])
   end
-
 end

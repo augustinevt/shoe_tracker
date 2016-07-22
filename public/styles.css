@@ -1,0 +1,37 @@
+body {
+  background-color: black;
+  text-align: center;
+}
+
+* {
+  font-family: monospace;
+}
+
+div {
+  position: relative;
+  height: 225px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  float: right;
+  /*position:absolute;
+  right:0;*/
+}
+
+.center {
+  text-align: center;
+}
+
+#new-store-button {
+  position: absolute;
+  right: 50;
+  top: 50;
+}
+
+#location {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 30px;
+}

@@ -8,7 +8,6 @@ gem("rake")
 gem("pry")
 gem('launchy')
 
-
 group :test do
   gem("rspec")
   gem("capybara")
