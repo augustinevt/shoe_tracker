@@ -1,0 +1,8 @@
+<%= @store.name() %>
+<%= @store.location() %>
+
+
+<form class="" action="/stores/<%=@store.id()%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit" name="button">Delete</button>
+</form>
