@@ -5,4 +5,8 @@ describe 'Stores' do
     new_store = Store.create(name: '')
     expect(Store.all).to eq([])
   end
+  it "should titlize name" do
+    new_store = Store.create(name: 'addidas')
+    expect(Store.all.first.name).to eq('Addidas')
+  end
 end

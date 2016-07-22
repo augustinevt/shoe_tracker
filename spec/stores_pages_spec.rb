@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe 'stores resource', type: :feature do
   it "lists the stores on the screen" do
-    new_store = Store.create(name: "nike", location: "Beaverton")
+    new_store = Store.create(name: "Nike", location: "Beaverton")
     visit('/')
-    expect(page).to have_content('nike')
+    expect(page).to have_content('Nike')
   end
 
   it "user clicks on store and it takes them to store page" do
