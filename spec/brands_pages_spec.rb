@@ -18,5 +18,5 @@ describe 'Brands', type: :feature do
     click_on('Add Brand')
     expect(page).to have_content('Addidas')
   end
-  
+
 end

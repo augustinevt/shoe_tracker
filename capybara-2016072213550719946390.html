@@ -1,26 +1,32 @@
-<%= @store.name() %>
-<%= @store.location() %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shoe_tracker</title>
+  </head>
+  <body>
+    Bub's ShoesBeaverton
 
-
-<form class="" action="/stores/<%=@store.id()%>" method="post">
+<form class="" action="/stores/81" method="post">
   <input type="hidden" name="_method" value="delete">
   <button type="submit" name="button">Delete</button>
 </form>
 
-<a href="/stores/<%=@store.id()%>/edit">Update Store</a>
+<a href="/stores/81/edit">Update Store</a>
 
 <br>
 
 <a href="/">Home</a>
 
 <form action="/brands/create" method="post">
-  <input type="hidden" name="store_id" value="<%=@store.id()%>">
+  <input type="hidden" name="store_id" value="81">
   <input type="text" name="brand_name" value="">
   <button type="submit" name="button">Add Brand</button>
 </form>
 
 <h2>all brands</h2>
 
-<% @store.brands.each do |brand| %>
-  <%= brand.name %>
-<% end %>
+  Nike
+
+  </body>
+</html>
