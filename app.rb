@@ -40,9 +40,10 @@ end
 
 post('/brands/create') do
   @store = Store.find(params['store_id'])
-  @brand = Brand.exists?(name: params['brand_name']) ? Brand.find_by_name(params['brand_name']).id : nil
+  brand_name = params['brand_name'].titleize()
+  @brand = Brand.exists?(name: brand_name) ? Brand.find_by_name(brand_name).id : nil
   if !(@brand) && !(@store.brand_ids.include? @brand)
-    @brand = Brand.create(name: params['brand_name'])
+    @brand = Brand.create(name: brand_name)
     @store.brands.push(@brand)
     redirect "/stores/#{@store.id()}"
   else
